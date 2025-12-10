@@ -1,0 +1,7 @@
+module;
+#include <fmt/format.h>
+export module utilities;
+
+export int add(int a, int b) { return a + b; }
+
+export void greet() { fmt::println("Hello from the utilities module!"); }
