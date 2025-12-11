@@ -1,0 +1,7 @@
+{
+  "name": "movie-fan",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "fmt"
+  ]
+}

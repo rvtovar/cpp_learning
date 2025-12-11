@@ -21,6 +21,7 @@ target_link_libraries(staticproj_lib PUBLIC fmt::fmt)
 
 add_executable(staticproj
     src/main.cpp
+	src/classes/Player.cpp
 )
 
 target_link_libraries(staticproj PRIVATE staticproj_lib fmt::fmt)

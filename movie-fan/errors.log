@@ -1,0 +1,52 @@
+|| [1/11] Generating CXX dyndep file CMakeFiles/Movies.dir/CXX.dd
+|| [2/11] Scanning /workspace/src/main.cpp for CXX dependencies
+|| FAILED: [code=1] CMakeFiles/movie-fan.dir/src/main.cpp.o.ddi 
+|| "/usr/bin/clang-scan-deps-21" -format=p1689 -- /usr/bin/clang++-21   -g -std=gnu++23 -x c++ /workspace/src/main.cpp -c -o CMakeFiles/movie-fan.dir/src/main.cpp.o -resource-dir "/usr/lib/llvm-21/lib/clang/21" -MT CMakeFiles/movie-fan.dir/src/main.cpp.o.ddi -MD -MF CMakeFiles/movie-fan.dir/src/main.cpp.o.ddi.d > CMakeFiles/movie-fan.dir/src/main.cpp.o.ddi.tmp && mv CMakeFiles/movie-fan.dir/src/main.cpp.o.ddi.tmp CMakeFiles/movie-fan.dir/src/main.cpp.o.ddi
+|| Error while scanning dependencies for /workspace/src/main.cpp:
+src/main.cpp|1 col 10| fatal error: 'fmt/format.h' file not found
+|| [3/11] Scanning /workspace/src/utilities.ixx for CXX dependencies
+|| [4/11] Building CXX object CMakeFiles/Movies.dir/src/classes/Movies.ixx.o
+|| FAILED: [code=1] CMakeFiles/Movies.dir/src/classes/Movies.ixx.o CMakeFiles/Movies.dir/Movies.pcm 
+|| /usr/bin/clang++-21  -isystem /workspace/build/vcpkg_installed/x64-linux/include -g -std=gnu++23 -MD -MT CMakeFiles/Movies.dir/src/classes/Movies.ixx.o -MF CMakeFiles/Movies.dir/src/classes/Movies.ixx.o.d @CMakeFiles/Movies.dir/src/classes/Movies.ixx.o.modmap -o CMakeFiles/Movies.dir/src/classes/Movies.ixx.o -c /workspace/src/classes/Movies.ixx
+src/classes/Movies.ixx|3 col 10| warning: '#include <filename>' attaches the declarations to the named module 'Movies', which is not usually intended; consider moving that directive before the module declaration [-Winclude-angled-in-module-purview]
+||     3 | #include <optional> // Used for movie_check
+||       |          ^
+|| In file included from /workspace/src/classes/Movies.ixx:3:
+|| In file included from /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/optional:42:
+|| In file included from /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/exception:166:
+|| In file included from /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/exception_ptr.h:37:
+/usr/include/c++/14/typeinfo|91 col 9| error: declaration of 'type_info' in the global module follows declaration in module Movies
+||    91 |   class type_info
+||       |         ^
+/usr/include/c++/14/bits/cxxabi_init_exception.h|52 col 9| note: previous declaration is here
+||    52 |   class type_info;
+||       |         ^
+src/classes/Movies.ixx|4 col 10| warning: '#include <filename>' attaches the declarations to the named module 'Movies', which is not usually intended; consider moving that directive before the module declaration [-Winclude-angled-in-module-purview]
+||     4 | #include <string>
+||       |          ^
+|| In file included from /workspace/src/classes/Movies.ixx:4:
+|| In file included from /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/string:44:
+/usr/include/c++/14/bits/cpp_type_traits.h|471 col 29| error: declaration of 'iterator_traits' in the global module follows declaration in module Movies
+||   471 |   template<typename> struct iterator_traits;
+||       |                             ^
+/usr/include/c++/14/bits/stl_iterator_base_types.h|177 col 12| note: previous declaration is here
+||   177 |     struct iterator_traits
+||       |            ^
+|| In file included from /workspace/src/classes/Movies.ixx:4:
+|| In file included from /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/string:54:
+|| In file included from /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/basic_string.h:4154:
+|| In file included from /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/ext/string_conversions.h:45:
+|| In file included from /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/cstdio:42:
+|| In file included from /usr/include/stdio.h:44:
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h|36 col 8| error: declaration of '_IO_FILE' in the global module follows declaration in module Movies
+||    36 | struct _IO_FILE;
+||       |        ^
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h|4 col 8| note: previous declaration is here
+||     4 | struct _IO_FILE;
+||       |        ^
+src/classes/Movies.ixx|5 col 10| warning: '#include <filename>' attaches the declarations to the named module 'Movies', which is not usually intended; consider moving that directive before the module declaration [-Winclude-angled-in-module-purview]
+||     5 | #include <vector>
+||       |          ^
+|| 3 warnings and 3 errors generated.
+|| ninja: build stopped: subcommand failed.
+|| Exited with code 1
